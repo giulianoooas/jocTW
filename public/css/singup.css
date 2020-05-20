@@ -1,0 +1,108 @@
+#corp{
+    background-image: radial-gradient(white,green);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width:100%;
+}
+
+.gol{
+    width:10%;
+}
+
+#singup{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+h1{
+    width:100%;
+    text-align: center;
+}
+
+.element{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.element input{
+    height: 20%;
+    border-radius: 20%;
+    color:green;
+    font-size: 100%;
+    font-family: Arial;
+}
+
+.poza{
+    width:7%;
+    height:50%;
+}
+
+.inputul{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#asimplequestion{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.elementele{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.statement{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    color:green;
+    border-radius: 20%;
+    width:20%;
+    text-align: center;
+    font-size: 150%;
+    font-family: Arial;
+    border: 1px solid black;
+}
+
+label{
+    font-size: 150%;
+}
+
+.but{
+    color:green;
+    border-radius: 30%;
+    border:black 1px solid;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+#home{
+    border-radius: 30%;
+    border:black 1px solid;
+    font-size: 150%;
+    font-weight: bold;
+    background-color: white;
+    text-align: center;
+}
+
+#home a{
+    text-decoration: none;
+    color:green;
+}
+
+#butoanele{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}

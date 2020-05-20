@@ -1,0 +1,36 @@
+#meniu{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.gol {
+    width: 10%;
+}
+
+#corp {
+    background-image: radial-gradient(white,green);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.men{
+    transition: 1s;
+    text-align: center;
+    background-color: green;
+    border-radius: 20%;
+    border: 1px black solid;
+}
+
+.men a{
+    text-decoration: none;
+    color:white;
+    font-size: 200%;
+}
+
+.men:hover{
+    font-size: 300%;
+}

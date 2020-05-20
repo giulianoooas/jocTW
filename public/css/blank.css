@@ -1,0 +1,46 @@
+.gol {
+    width : 10%;
+}
+
+#corp{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#Eroarea{
+    width:80%;
+}
+
+#poza{
+    width:50%;
+}
+
+#link{
+    transition: 1s;
+    width : 30%;
+    text-decoration: none;
+    font-size: 100%;
+    font-family: Arial;
+    background-color: green;
+    border: 1px black solid;
+    border-radius: 20%;
+    text-align: center;
+}
+
+#link a {
+    text-decoration: none;
+    color:white;
+}
+
+#link:hover{
+    font-size: 200%;
+}
+
+#centrare{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

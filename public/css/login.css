@@ -1,0 +1,94 @@
+#corp{
+    background-image: radial-gradient(white,green);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width:100%;
+    text-align: center;
+}
+
+.gol{
+    width:10%;
+}
+
+#logare{
+    width:100%;
+}
+
+.buton{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width:100%;
+}
+.poza{
+    width:5%;
+}
+.input{
+    width: 70%;
+    height: 40%;
+    border-radius: 20%;
+    color:green;
+}
+
+.stilizare{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#textIntroductiv{
+    
+    font-size: 200%;
+    background-color: green;
+    color:white;
+    border:1px black solid;
+    border-radius: 50%;
+}
+
+.linkuri{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.nimic{
+    width:70%;
+}
+
+#catrePagini{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.catre{
+    background-color: green;
+    color:white;
+    border:1px black solid;
+    border-radius: 20%;
+}
+
+.catre a{
+    text-decoration: none;
+    color:white;
+    font-size: 150%;
+}
+
+.submit{
+    text-align: left;
+}
+
+.submit button{
+    border: 1px solid black;
+    border-radius: 20%;
+    color:green;   
+}
+
+#stil{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}

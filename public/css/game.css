@@ -1,0 +1,68 @@
+#corp{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#replay{
+    display: none;
+}
+
+#life {
+    transition: 1s;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#wingame{
+    width:100%;
+    height:100%;
+}
+
+#hero{
+    position: absolute;
+    z-index: 1;
+    width: 8%;
+}
+
+#life{
+    z-index: 1;
+}
+
+#spatele{
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#fromular{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:15%;
+    z-index: 1;
+    position: absolute;
+    left: 10%;
+    top:20%;
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 20%;   
+}
+
+#fromular button{
+    width:50%;
+}
+#fromular  div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.but{
+    border-radius: 20%;
+    border: black 1px solid;
+    color: green;
+}
