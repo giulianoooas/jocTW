@@ -66,3 +66,34 @@
     border: black 1px solid;
     color: green;
 }
+
+#fromular span{
+    color:white; 
+    text-align:center;
+    font-weight: bold; 
+    font-size:200%;
+}
+
+#homeLink{
+    transition: 0.3s;
+    z-index: 1;
+    position: absolute;
+    top : 30%;
+    width : 8%;
+    font-size: 130%;
+    font-weight: bold;
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 20%;
+    left:80%;
+    text-align: center;
+}
+
+#homeLink a{
+    color:white;
+    text-decoration: none;
+}
+
+#homeLink:hover{
+    font-size: 160%;
+}

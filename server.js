@@ -77,7 +77,9 @@ let verificareNickname = (val) => {
     for (let i = 0; i < gameri.length; i ++)
         if (val === gameri[i].nickname)
             return false;
-    return true;
+    if (val !== "")
+        return true;
+    return false;
 };
 
 let verificareParola = (val) => {

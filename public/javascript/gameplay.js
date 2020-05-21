@@ -37,6 +37,7 @@ window.addEventListener("keyup", (tasta)=>{ /// aici am folosit keyup, deoarece 
 
 let Qame_over = () => {
     if (hero.life <= 0 && RAN){ /// in momentul cand am ramas fara viata se termina jocul
+        homeLink.style.transition = "0s";
         RAN = false;  /// variabila care verifica daca se poate juca devina false
         clearInterval(generator); /// opresc generarea de monstrii/orci
         clearInterval(timer);   /// opresc mersul personajelor rele
@@ -55,6 +56,7 @@ let Qame_over = () => {
         gameOver.style.width = dim * 0.3 + "px";
         gameOver.style.height = dim1 *0.3 + "px";
         scoreBar.style.left = dim*0.45 + "px";
+        homeLink.style.left = dim*0.43 + "px";
         win_screen.removeChild(pauseButton); /// scot butonul de pauza
         win_screen.appendChild(gameOver); /// adaug poza de game over
         if (logat)

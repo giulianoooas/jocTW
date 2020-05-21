@@ -76,6 +76,14 @@ submit.addEventListener("click", async () =>{
     const mesaj = `Te joci destul de ${perioadaDeJoc} si esti un ${marcate}.`;
     Swal.fire(mesaj);
     }
+    age.value = "";
+    mail.value = "";
+    nickname.value = "";
+    parola.value = "";
+    for (let i = 0; i < input.length; i ++){
+        if (input[i].type == "radio" || input[i].type == "checkbox")
+            input[i].checked = false;
+    }
 });
 
 

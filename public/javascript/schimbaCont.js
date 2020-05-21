@@ -19,7 +19,7 @@ butonulSubmit.addEventListener("click", async () => { /// in functia asta verifi
     else {
     const raspuns = await fetch("http://localhost:800/gameri");
     const gameri = await raspuns.json();
-    let id = "nedefinit";
+    let id = "nedefinit"; //// prima data setez id-ul ca fiind nedefinit, si il schimb doar daca gasesc un player cu atributele pe care le caut eu
     const len = gameri.length;
     for (let i = 0; i < len; i ++){
         if (gameri[i].mail === mail.value && gameri[i].parola === parola.value){
@@ -41,6 +41,8 @@ butonulSubmit.addEventListener("click", async () => { /// in functia asta verifi
             "nickname" : nickname.value
         })
     });
+
+    localStorage.clear();
 
     mail1.value = "";
     parola1.value = "";
@@ -69,7 +71,8 @@ butonulSterge.addEventListener("click" , async () => { /// sterg cu ajutorul url
         }
     }     
 
-    if (id!= "nedefinit"){
+    if (id != "nedefinit"){
+        localStorage.clear();
         const req =await fetch("http://localhost:800/sterge-gamer/" + id, {
             method: "delete",
         });

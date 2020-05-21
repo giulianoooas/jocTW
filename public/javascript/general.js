@@ -16,7 +16,8 @@ let gameOver = 0; /// in aceasta variabila voi salva poza game over cand voi pie
 let formular = document.querySelector("#fromular"); /// formularul de logare
 let logat = false; /// daca esti conectat
 let idGamer = "undifened"; /// momentan player- ul nu este logat
-
+let firstLogin = true; //// verific daca n-a fost deja logat
+const homeLink = document.getElementById("homeLink");/// div-ul ce memoreaza link-ul catre prima pagina
 
 let hero = {
     "wasRemoved" : false,  /// verifica daca avatarul a fost sters de pe ecran
@@ -153,3 +154,65 @@ async function  modificaHightscore () { /// modifica scorul playerilor logati da
     });
     ///console.log("A mers");
 }
+
+
+/// fac o functie care verifica daca sunt deja logat pe site sau nu
+
+let verificare = async ()  =>{
+    const name = localStorage.getItem("name");
+    if (name !== null){
+        const raspuns = await fetch ("http://localhost:800/gameri");
+        const gameri = await raspuns.json();
+        for (let i of gameri){
+            if (i.nickname === name)
+                {
+                    idGamer = i.id;
+                    logat = true;
+                }
+        }
+
+        if (logat && firstLogin){ /// daca a existat atunci afisez primii 3 gmaeri dupa scorul lor, altfel afisez alerta ca nu exista cont 
+            firstLogin = false;
+            mail.style = "display:none";
+            parola.style = "display:none";
+            submit.style = "display:none";
+            for (let i of deDisparut)
+                i.style.display = "none"; /// scot hr - urile in plus de pe pagina
+    
+            gameri.sort(
+                function(a,b){
+                    return a.highscore < b.highscore;
+                }
+            );
+    
+            span.textContent = "TOP";
+            let numar = 3;
+            if (gameri.length < 3)
+                numar = gameri.length;
+            for (let i = 0; i < numar; i ++){
+                let p = document.createElement("div");
+                p.textContent = `${gameri[i].nickname} : ${gameri[i].highscore}`;
+                p.style = "border: 1px solid black; background-color: white; color : green; border-radius: 20%; text-align: center; font-weight: bold";
+                formular.appendChild(p);
+                if (gameri[i].id === idGamer){
+                    localStorage.setItem("name", gameri[i].nickname); /// aici memorez in browser daca am fost sau nu logat
+                }
+                    
+            }
+            formular.appendChild(document.createElement("hr"));
+            for (let i = 0; i < gameri.length; i ++){
+                if (gameri[i].id === idGamer){
+                    let p = document.createElement("div");
+                    p.textContent = `${gameri[i].nickname} : ${gameri[i].highscore}`;
+                    p.style = "border: 1px solid black; background-color: white; color : green; border-radius: 100%; text-align: center; font-weight: bold";
+                    formular.appendChild(p);     
+                }               
+            }
+            
+            formular.appendChild(document.createElement("hr"));
+        }
+
+    }
+};
+
+verificare();
