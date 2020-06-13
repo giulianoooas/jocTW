@@ -26,6 +26,7 @@ const parolaValid1 = /(([a-z]|[A-Z])+([0-9]|(!|@|#|$|%|^|&|\.|_|-|\+))+([a-z]|[A
 /// stop regex
 
 let gameri = []; /// array ul meu de playeri
+let comentariile = []; /// array ul de comentarii
 ///
 class CitireScriere{ /// am facut aici doua functii, una care citeste fisierul cand pornesc server-ul si alta care il scrie de fiecare data cand apar schimbari
     constructor(fisier){
@@ -107,6 +108,25 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + "/views/index.html");
 });
 
+app.get('/com' , (req,res) => {
+    res.send(comentariile);
+});
+
+app.post('/addCom', (req,res) => {
+    const raspuns = req.body;
+    const obiect = {
+        "content" : raspuns.content,
+        "id" : uid(10),
+        "dislake" : 0
+    }
+    comentariile.push(obiect);
+    res.send(comentariile);
+});
+
+app.get('/comentarii.html' , (req,res) => {
+    res.sendFile(__dirname + "/views/comentarii.html");
+});
+
 app.get('/game.html' , (req,res) => {
     res.sendFile(__dirname + "/views/game.html");
 });
@@ -121,6 +141,10 @@ app.get('/index.html' , (req,res) => {
 
 app.get('/singup.html', (req,res) => {
     res.sendFile(__dirname + "/views/singup.html");
+});
+
+app.get('/quiz.html', (req,res) => {
+    res.sendFile(__dirname + '/views/quiz.html')
 });
 
 app.get('*', (req,res) => {
@@ -178,12 +202,37 @@ app.post('/adauga-gamer',  (req, res) => {
 
 //// pentru a adauga un nou user sau a schimba datele, trebuie ca user-ul sa nu completeze nimic gresit
 
+app.delete('/sterge-com/:id', (req, res) => {
+    comentariile = comentariile.filter(user => user.id !== req.params.id);
+    res.send(comentariile);
+});
+
 app.delete('/sterge-gamer/:id', (req, res) => {
     gameri = gameri.filter(user => user.id !== req.params.id);
     iostream.write();
     res.send(gameri);
 });
 
+app.put('/dis', (req,res) =>{
+    let merge = true;
+    const raspuns =  req.body;
+    for (let i of comentariile)
+        if (i.id === raspuns.id){
+            i.dislake ++;
+            if (i.dislake == 5) /// la 5 dislike uri scot comentariul de pe pagina
+                merge = false;
+        }
+    res.send({merge});
+});
 
+app.put('/dis1', (req,res) =>{
+    const raspuns =  req.body;
+    for (let i of comentariile)
+        if (i.id === raspuns.id){
+            if (i.dislake > 0) /// sscad cu 1 dislikurile
+                i.dislake --;
+        }
+    res.send(comentariile);
+});
 
 app.listen(port, () => console.log(`http://localhost:${port}`));

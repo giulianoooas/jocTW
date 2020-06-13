@@ -1,0 +1,75 @@
+.gol {
+    width : 10%;
+}
+
+#corp{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-image: radial-gradient( white, green);
+}
+
+#quiz{
+    width:80%;
+}
+
+.titlu{
+    border: 1px solid black;
+    border-radius: 20%;
+    background-color: green;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#animatie{
+    font-size: 150%;
+    width:30%;
+}
+
+#animatie:hover{
+    font-size: 200%;
+}
+
+ol{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#de{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#score{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+button{
+    border: 1px solid black;
+    border-radius: 20%;
+    background-color: green;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+#scorul{
+    font-size: 150%;
+    font-weight: bold;
+}

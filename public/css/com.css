@@ -1,0 +1,127 @@
+.gol {
+    width : 10%;
+}
+
+
+#corp{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-image: radial-gradient( white, green);
+}
+
+#Eroarea{
+    width:80%;
+}
+
+#poza{
+    width:50%;
+}
+
+#link{
+    transition: 1s;
+    width : 30%;
+    text-decoration: none;
+    font-size: 100%;
+    font-family: Arial;
+    background-color: green;
+    border: 1px black solid;
+    border-radius: 20%;
+    text-align: center;
+}
+
+#link a {
+    text-decoration: none;
+    color:white;
+}
+
+#link:hover{
+    font-size: 200%;
+}
+
+#centrare{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#deCompletat{
+    background-color: green;
+    border-radius: 20%;
+    border:1px solid black;
+}
+
+#c1{
+    font-size: 150%;
+    color:green;
+    background-color: white;
+    border-radius: 20%;
+    border:black 1px solid;
+    width:50%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mij{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#comentariile{
+    height: 650px;
+    border: 1px solid black;
+    width:70%;
+    color:green;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+}
+
+button{
+    border:1px solid black;
+    border-radius: 20%;
+    color:green;
+    transition: 0.2s;
+}
+
+button:hover{
+    font-size: 120%;
+}
+
+input{
+    order:1px solid black;
+    border-radius: 20%;
+    color:green;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pentruEditare{
+    color:green;
+}
+
+.butoanele{
+    height:20%;
+    font-size: 200%;
+}
+
+#afisezCom:hover{
+    font-size: 250%;
+}
+
+#ascundCom:hover{
+    font-size: 250%;
+}
+
+.centru{
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    justify-content: space-around;
+    width:15%;
+}
