@@ -38,6 +38,8 @@ window.addEventListener("keyup", (tasta)=>{ /// aici am folosit keyup, deoarece 
 let Qame_over = () => {
     if (hero.life <= 0 && RAN){ /// in momentul cand am ramas fara viata se termina jocul
         homeLink.style.transition = "0s";
+        audio.style.display = "none";
+        audio.pause();
         RAN = false;  /// variabila care verifica daca se poate juca devina false
         clearInterval(generator); /// opresc generarea de monstrii/orci
         clearInterval(timer);   /// opresc mersul personajelor rele

@@ -30,6 +30,7 @@ a{
 #animatie{
     font-size: 150%;
     width:30%;
+    transition: 0.1s;
 }
 
 #animatie:hover{

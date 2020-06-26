@@ -18,6 +18,8 @@ let logat = false; /// daca esti conectat
 let idGamer = "undifened"; /// momentan player- ul nu este logat
 let firstLogin = true; //// verific daca n-a fost deja logat
 const homeLink = document.getElementById("homeLink");/// div-ul ce memoreaza link-ul catre prima pagina
+const audio = document.querySelector("audio"); /// elementul meu audio
+audio.play();
 
 let hero = {
     "wasRemoved" : false,  /// verifica daca avatarul a fost sters de pe ecran
